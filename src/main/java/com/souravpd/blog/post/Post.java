@@ -1,25 +1,31 @@
 package com.souravpd.blog.post;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-
+import javax.persistence.Table;
 
 import com.souravpd.blog.topic.Topic;
 
 @Entity
+@Table(name = "post")
 public class Post {
 	
 	@Id
 	private String id;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "description")
 	private String description;
 	@Lob
+	@Column(name = "content")
 	private String content;
 	
 
 	@ManyToOne
+	@Column(name = "topic")
 	private Topic topic;
 	
 	public Post() {

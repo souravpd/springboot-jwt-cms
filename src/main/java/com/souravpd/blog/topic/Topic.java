@@ -1,14 +1,19 @@
 package com.souravpd.blog.topic;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "topic")
 public class Topic {
 	
 	@Id
 	private String id;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "description")
 	private String description;
 	
 	public Topic() {
