@@ -25,7 +25,6 @@ public class Post {
 	
 
 	@ManyToOne
-	@Column(name = "topic")
 	private Topic topic;
 	
 	public Post() {
